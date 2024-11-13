@@ -209,14 +209,16 @@ class Factory:
                 None,
                 (
                     newrelic.US_EVENTS_ENDPOINT if region_l == 'us' \
-                        else newrelic.EU_EVENTS_ENDPOINT
+                        else newrelic.EU_EVENTS_ENDPOINT if region_l == 'eu' \
+                            else newrelic.FEDRAMP_EVENTS_ENDPOINT
                 ).format(account_id=account_id)
             )
 
         return newrelic.NewRelic(
             license_key,
             newrelic.US_LOGGING_ENDPOINT if region_l == 'us' \
-                else newrelic.EU_LOGGING_ENDPOINT,
+                else newrelic.EU_LOGGING_ENDPOINT if region_l =='eu' \
+                    else newrelic.FEDRAMP_LOGGING_ENDPOINT,
             None
         )
 

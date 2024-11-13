@@ -16,10 +16,12 @@ NR_ACCOUNT_ID = 'NR_ACCOUNT_ID'
 
 US_LOGGING_ENDPOINT = 'https://log-api.newrelic.com/log/v1'
 EU_LOGGING_ENDPOINT = 'https://log-api.eu.newrelic.com/log/v1'
+FEDRAMP_LOGGING_ENDPOINT = 'https://gov-log-api.newrelic.com/log/v1'
 LOGS_EVENT_SOURCE = 'logs'
 
 US_EVENTS_ENDPOINT = 'https://insights-collector.newrelic.com/v1/accounts/{account_id}/events'
 EU_EVENTS_ENDPOINT = 'https://insights-collector.eu01.nr-data.net/v1/accounts/{account_id}/events'
+FEDRAMP_EVENTS_ENDPOINT = 'https://gov-insights-collector.newrelic.com/v1/accounts/{account_id}/events'
 
 CONTENT_ENCODING = 'gzip'
 MAX_EVENTS = 2000
